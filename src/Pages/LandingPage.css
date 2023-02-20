@@ -1,0 +1,70 @@
+.PhotoLPBox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 5px blue;
+}
+
+.photoLP {
+  margin: 30px 30px 0px;
+
+  width: 100%;
+  border-radius: 15px;
+}
+.textLP {
+  display: block;
+  justify-content: center;
+  margin: 15px;
+  color: #002060;
+}
+.bleucanard {
+  color: #009aa6;
+}
+
+h1 {
+  font-size: large;
+  text-align: center;
+}
+p {
+  font-size: medium;
+  text-align: center;
+}
+.buttonLPsign {
+  display: flex;
+  justify-content: center;
+}
+
+.button-Sign {
+  width: 250px;
+  height: 43px;
+  border: none;
+  border-radius: 5px;
+  background-color: #009aa6;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px;
+}
+.button-Sign:hover,
+.button-Sign:active,
+.button-Sign:focus {
+  background-color: #7765c4 !important;
+}
+
+@media (min-width: 768px) {
+  .photoLP {
+    width: 38%;
+  }
+  h1 {
+    font-size: xx-large;
+  }
+  p {
+    font-size: larger;
+  }
+  .button-Sign {
+    height: 75px;
+    width: 373px;
+    font-size: 1.5em;
+    margin-left: 15px;
+  }
+}

@@ -1,0 +1,70 @@
+.headerLP {
+  background: linear-gradient(
+    150deg,
+    #ffcccc 5%,
+    #ffccff 15%,
+    #ffccff 30%,
+    #ffccff 40%,
+    #fcffe6 70%,
+    #e7ffe6 80%,
+    #ccffff 90%
+  );
+  box-shadow: 0px 3px 10px #009aa6;
+
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  max-width: 40%;
+}
+
+.logoContainerDesktop {
+  display: none;
+}
+
+.button-Sign-Log {
+  border: none;
+  height: 35px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: #009aa6;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 5px;
+}
+.button-Sign-Log:hover,
+.button-Sign-Log:active,
+.button-Sign-Log:focus {
+  background-color: green !important;
+}
+
+@media (min-width: 768px) {
+  .headerLP {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  .logoContainerDesktop {
+    display: block;
+  }
+  .logoDesk {
+    max-width: 40%;
+  }
+  .logo {
+    display: none;
+  }
+
+  .button-Sign-Log {
+    height: 53px;
+    width: 153px;
+    font-size: 1.5em;
+    margin-left: 15px;
+  }
+}

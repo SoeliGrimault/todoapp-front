@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Admin from './Pages/Admin';
+import Connexion from './Pages/Connexion';
+import GoDocument from './Pages/GoDocument';
+import Inscription from './Pages/Inscription';
+import LandingPage from './Pages/LandingPage';
+import AddEvent from './Pages/AddEvent';
 
-function App() {
+import UserInterface from './Pages/UserInterface';
+import UserProfile from './Pages/UserProfile';
+import AddDoc from './Pages/AddDoc';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<LandingPage />} />
+          <Route path='/inscription' element={<Inscription />} />
+          <Route path='/connexion' element={<Connexion />} />
+
+          {/* <Route element={<RequireAuth allowedRole={['admin', 'user']} />}> */}
+          <Route path='/user/interface' element={<UserInterface />} />
+          <Route path='/user/profile' element={<UserProfile />} />
+          <Route path='/user/document' element={<GoDocument />} />
+          <Route path='/user/add/event' element={<AddEvent />} />
+          <Route path='/user/add/doc' element={<AddDoc />} />
+          {/* </Route> */}
+
+          {/* <Route element={<RequireAuth allowedRole={['admin']} />}> */}
+          <Route path='/admin' element={<Admin />} />
+          {/* </Route> */}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
