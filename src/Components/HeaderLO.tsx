@@ -7,7 +7,7 @@ const HeaderLO = () => {
     <div className='headerLP'>
       <div className='logoContainer'>
         <img
-          className='logo'
+          className='logoLP'
           src='/assets/LogoFull.png'
           alt='logo toux doux app'
         />

@@ -53,13 +53,13 @@ p {
 
 @media (min-width: 768px) {
   .photoLP {
-    width: 38%;
+    width: 33%;
   }
   h1 {
     font-size: xx-large;
   }
   p {
-    font-size: larger;
+    font-size: x-large;
   }
   .button-Sign {
     height: 75px;

@@ -1,4 +1,5 @@
-.headerLP {
+/* ---------------------box navbar------------------------------------- */
+.navbar {
   background: linear-gradient(
     150deg,
     #ffcccc 5%,
@@ -12,59 +13,76 @@
   box-shadow: 0px 3px 10px #009aa6;
 
   height: 80px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
 }
-
-.logo {
-  max-width: 40%;
+.NBContainerLogo {
+  max-width: 30%;
+}
+/* ---------------------Logo TODOAPP---------------------------------------- */
+.logoNB {
+  max-width: 53%;
 }
 
 .logoContainerDesktop {
   display: none;
 }
-
-.button-Sign-Log {
-  border: none;
-  height: 35px;
-  width: 90px;
-  border-radius: 5px;
-  background-color: #009aa6;
-  color: white;
-  font-size: 0.8em;
-  font-weight: bold;
-  margin: 5px;
+/* --------------------icon navigation---------------------------------- */
+/* ---------------------box des icons------------------------------------- */
+.iconeNB {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
 }
-.button-Sign-Log:hover,
-.button-Sign-Log:active,
-.button-Sign-Log:focus {
-  background-color: green !important;
+
+/* -------------------------------ICON------------------------------ */
+.logoProfileNB {
+  margin-top: 10px;
+  width: 63px;
+}
+.logoDocNB {
+  margin-top: 5px;
+  width: 53px;
+}
+.logoDisconnectNB {
+  margin-top: 13px;
+  width: 36px;
 }
 
 @media (min-width: 768px) {
-  .headerLP {
+  .navbar {
     height: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+
+    box-shadow: 0px 3px 20px #009aa6;
   }
   .logoContainerDesktop {
     display: block;
   }
   .logoDesk {
-    max-width: 40%;
+    max-width: 90%;
   }
-  .logo {
+  .logoNB {
     display: none;
   }
+  .iconeNB {
+    width: 30%;
+  }
 
-  .button-Sign-Log {
-    height: 53px;
-    width: 153px;
-    font-size: 1.5em;
-    margin-left: 15px;
+  .logoProfileNB {
+    width: 133px;
+  }
+  .logoDocNB {
+    width: 123px;
+  }
+  .logoDisconnectNB {
+    margin-top: 25px;
+    width: 70px;
   }
 }
