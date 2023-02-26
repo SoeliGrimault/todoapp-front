@@ -7,7 +7,7 @@ const UserInterface = () => {
     <div className='UIpage'>
       <NavBar />
       <div className='FonctionUI'>
-        <p className='textUI'> Ajouter un document</p>
+        <p className='textUI'> Ajouter un document :</p>
         <Link to={'/user/add/doc'}>
           <img
             className='PrendreUnePhoto'
@@ -15,7 +15,7 @@ const UserInterface = () => {
             alt='allez sur ajout doc, prrendre une pictur'
           />
         </Link>
-        <div className='textUI'>Créer un event:</div>
+        <div className='textUI'>Créer un event :</div>
         <Link to={'/user/add/event'}>
           <img
             className='ajoutevent'

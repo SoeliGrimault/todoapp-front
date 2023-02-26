@@ -1,0 +1,71 @@
+.UPpage {
+  display: flex;
+  justify-content: space-around;
+  color: #009aa6;
+  margin-top: 23px;
+  font-weight: bold;
+}
+.partiePhotoUP {
+  width: 25%;
+}
+
+.PhotoProfileUser {
+  width: 133%;
+  border-radius: 33%;
+}
+.partieTextUP {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+.partieMesInfosUP {
+  margin-left: 15px;
+  color: #002060;
+  margin-top: 15px;
+}
+.partieMesInfos {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.monMailUP {
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+.monNomUP {
+  font-size: 0.8em;
+}
+.updateProfile {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .UPpage {
+    margin-top: 20px;
+  }
+  .partiePhotoUP {
+    display: flex;
+    justify-content: end;
+    padding-right: 23px;
+
+    width: 25%;
+  }
+  .PhotoProfileUser {
+    width: 50%;
+    /* align-items: center; */
+  }
+  .partieTextUP {
+    font-size: 2em;
+  }
+  .partieMesInfosUP {
+    margin-left: 50px;
+  }
+  .partieMesInfos {
+    font-size: 1.5em;
+  }
+  .monMailUP {
+    font-size: 1.2em;
+  }
+  .monNomUP {
+    font-size: 1.2em;
+  }
+}

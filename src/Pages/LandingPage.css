@@ -2,12 +2,10 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  border: 5px blue;
 }
 
 .photoLP {
   margin: 30px 30px 0px;
-
   width: 100%;
   border-radius: 15px;
 }
@@ -26,7 +24,7 @@ h1 {
   text-align: center;
 }
 p {
-  font-size: medium;
+  font-size: small;
   text-align: center;
 }
 .buttonLPsign {
@@ -56,13 +54,13 @@ p {
     width: 33%;
   }
   h1 {
-    font-size: xx-large;
+    font-size: 1.5em;
   }
   p {
-    font-size: x-large;
+    font-size: 1em;
   }
   .button-Sign {
-    height: 75px;
+    height: 60px;
     width: 373px;
     font-size: 1.5em;
     margin-left: 15px;

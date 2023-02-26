@@ -1,0 +1,57 @@
+.titleInscription {
+  display: flex;
+  justify-content: center;
+  color: #002060;
+  font-size: 2em;
+}
+.containerInscription {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  color: #002060;
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  margin-top: 3px;
+  width: 90%;
+  height: 20px;
+}
+
+.boutonInscription {
+  border: none;
+  height: 35px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: #7765c4;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 5px;
+}
+.boutonInscription:hover,
+.boutonInscription:active,
+.boutonInscription:focus {
+  background-color: #e56dd0 !important;
+}
+
+@media (min-width: 768px) {
+  .titleInscription {
+    font-size: 3.2em;
+  }
+  .boutonInscription {
+    font-size: 1.3em;
+    height: 43px;
+    width: 173px;
+  }
+
+  .containerInscription {
+    font-size: 1.4em;
+  }
+  .form-control {
+    font-size: 0.9em;
+    width: 90%;
+    height: 30px;
+  }
+}

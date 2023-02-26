@@ -2,7 +2,7 @@
 .FonctionUI {
   display: flex;
   justify-content: space-between;
-  padding: 45px;
+  padding: 23px;
   color: #002060;
 }
 /* ----------------------logo1---------------------------------------- */
@@ -21,8 +21,9 @@
 @media (min-width: 768px) {
   .FonctionUI {
     display: flex;
-    justify-content: space-between;
-    padding: 45px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
     color: #002060;
   }
   /* ----------------------logo1---------------------------------------- */

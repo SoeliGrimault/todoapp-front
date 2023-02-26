@@ -1,8 +1,10 @@
 import './NavBar.css';
 
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const NavBar = () => {
+  const { handleLogout } = useAuth();
   return (
     <div className='navbar'>
       <div className='NBContainerLogo'>
@@ -43,6 +45,7 @@ const NavBar = () => {
             className='logoDisconnectNB'
             src='/assets/decobleu.svg'
             alt='deconnectez vous'
+            onClick={handleLogout}
           />
         </Link>
       </div>

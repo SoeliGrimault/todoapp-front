@@ -1,0 +1,57 @@
+.titleConnexion {
+  display: flex;
+  justify-content: center;
+  color: #002060;
+  font-size: 2em;
+}
+.containerConnexion {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  color: #002060;
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  margin-top: 3px;
+  width: 90%;
+  height: 20px;
+}
+
+.boutonConnexion {
+  border: none;
+  height: 35px;
+  width: 93px;
+  border-radius: 5px;
+  background-color: #7765c4;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 5px;
+}
+.boutonConnexion:hover,
+.boutonConnexion:active,
+.boutonConnexion:focus {
+  background-color: #e56dd0 !important;
+}
+
+@media (min-width: 768px) {
+  .titleConnexion {
+    font-size: 3.2em;
+  }
+  .boutonConnexion {
+    font-size: 1.1em;
+    height: 50px;
+    width: 230px;
+  }
+
+  .containerConnexion {
+    font-size: 1.4em;
+  }
+  .form-control {
+    font-size: 0.9em;
+    width: 90%;
+    height: 30px;
+  }
+}

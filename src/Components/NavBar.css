@@ -12,7 +12,7 @@
   );
   box-shadow: 0px 3px 10px #009aa6;
 
-  height: 80px;
+  height: 63px;
 
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,7 @@
 .iconeNB {
   display: flex;
   justify-content: space-around;
-  width: 80%;
+  width: 100%;
 }
 
 /* -------------------------------ICON------------------------------ */
@@ -64,6 +64,7 @@
   }
   .logoContainerDesktop {
     display: block;
+    width: 130%;
   }
   .logoDesk {
     max-width: 90%;
@@ -72,7 +73,7 @@
     display: none;
   }
   .iconeNB {
-    width: 30%;
+    width: 40%;
   }
 
   .logoProfileNB {

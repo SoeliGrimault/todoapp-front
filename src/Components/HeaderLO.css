@@ -10,8 +10,7 @@
     #ccffff 90%
   );
   box-shadow: 0px 3px 10px #009aa6;
-
-  height: 80px;
+  height: 63px;
   display: flex;
   justify-content: space-between;
   align-items: center;
