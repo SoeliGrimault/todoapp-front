@@ -10,7 +10,7 @@ import UserInterface from './Pages/UserInterface';
 import UserProfile from './Pages/UserProfile';
 import AddDoc from './Pages/AddDoc';
 import CurrentUserProvider from './context/AuthContext';
-import UpdateProfile from './Pages/UpdateProfile';
+import AddChild from './Pages/AddChild';
 
 const App = () => {
   return (
@@ -29,7 +29,9 @@ const App = () => {
             <Route path='/user/document' element={<GoDocument />} />
             <Route path='/user/add/event' element={<AddEvent />} />
             <Route path='/user/add/doc' element={<AddDoc />} />
-            <Route path='/user/up/profile' element={<UpdateProfile />} />
+            <Route path='/user/add/child' element={<AddChild />} />
+            <Route path='/user/admin' element={<Admin />} />
+
             {/* </Route> */}
 
             {/* <Route element={<RequireAuth allowedRole={['admin']} />}> */}

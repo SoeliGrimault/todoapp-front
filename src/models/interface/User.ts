@@ -1,3 +1,5 @@
+import { ChildrenType } from './Children';
+
 export interface UserType {
   id: string;
   email: string;
@@ -6,4 +8,5 @@ export interface UserType {
   picture: string;
   role?: string;
   accessToken?: string | undefined;
+  children: ChildrenType[];
 }

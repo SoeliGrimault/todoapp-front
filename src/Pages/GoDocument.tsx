@@ -1,5 +1,5 @@
 const GoDocument = () => {
-  return <div>Je suis de mes documents </div>;
+  return <div>page go doc</div>;
 };
 
 export default GoDocument;

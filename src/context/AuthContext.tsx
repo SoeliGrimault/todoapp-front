@@ -69,8 +69,8 @@ const CurrentUserProvider = ({ children }: ProviderProps) => {
         navigate('/connexion');
       } else {
         console.log('zutttttttttttttttttttt à jour : ', user);
-
-        setCurrentUser(user);
+        const userWithChildren = { ...user, children: [] };
+        setCurrentUser(userWithChildren);
       }
       setAuthLoading(false);
       console.log('AuthContext après requetes: ', authLoading);
@@ -103,6 +103,7 @@ const CurrentUserProvider = ({ children }: ProviderProps) => {
     setAuthLoading,
     handleLogout,
   };
+
   return (
     // On dit ici que le provider (la fonction qui fournit le context grâce à la prop 'value') enveloppe 'children' qui peut être n'importe quel élément. On va utiliser ce provider dans App.tsx pour envelopper toute l'application.
     <CurrentUserContext.Provider value={stateValues}>

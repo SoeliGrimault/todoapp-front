@@ -10,7 +10,7 @@
 }
 
 .PhotoProfileUser {
-  width: 133%;
+  width: 113%;
   border-radius: 33%;
 }
 .partieTextUP {
@@ -35,7 +35,36 @@
   font-size: 0.8em;
 }
 .updateProfile {
-  margin-top: 10px;
+  font-size: small;
+  margin-top: 13px;
+  margin-right: 13px;
+  margin-bottom: 5px;
+}
+.PourquoiAjouterEnfant {
+  margin: 13px;
+  font-size: small;
+  color: #002060;
+}
+
+.ajoutsupPaxtext {
+  font-size: medium;
+  color: #002060;
+  font-weight: bold;
+  margin: 13px;
+}
+.Mesenfantsamoi {
+  color: #002060;
+  margin-left: 15px;
+}
+
+.containerAjoutSupplogo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ajoutpaxlogo {
+  margin-left: 50px;
+  width: 40%;
 }
 
 @media (min-width: 768px) {
@@ -50,7 +79,7 @@
     width: 25%;
   }
   .PhotoProfileUser {
-    width: 50%;
+    width: 40%;
     /* align-items: center; */
   }
   .partieTextUP {
@@ -67,5 +96,20 @@
   }
   .monNomUP {
     font-size: 1.2em;
+  }
+  .updateProfile {
+    font-size: medium;
+  }
+
+  .Mesenfantsamoi {
+    margin-left: 50px;
+    margin-top: 15px;
+  }
+  .PourquoiAjouterEnfant {
+    font-size: larger;
+  }
+
+  .ajoutpaxlogo {
+    width: 30%;
   }
 }

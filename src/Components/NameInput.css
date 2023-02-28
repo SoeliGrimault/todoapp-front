@@ -1,0 +1,39 @@
+.alert {
+  color: #009aa6 !important;
+  font-size: 0.8em;
+}
+
+.modifNameInput {
+  width: 173px;
+  height: 23px;
+}
+.boutonModifierName {
+  margin-left: 6px;
+  width: 81px;
+  height: 23px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e56dd0;
+  color: white;
+}
+
+.boutonModifierName:hover,
+.boutonModifierName:active,
+.boutonModifierName:focus {
+  background-color: #009aa6 !important;
+}
+
+@media (min-width: 768px) {
+  .alert {
+    font-size: 1em;
+  }
+  .modifNameInput {
+    width: 200px;
+    height: 23px;
+  }
+
+  .boutonModifierName {
+    height: 23px;
+    font-weight: bold;
+  }
+}
