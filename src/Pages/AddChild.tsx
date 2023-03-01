@@ -5,6 +5,7 @@ import useAxiosPrivate from '../api/useAxiosPrivate';
 import NavBar from '../Components/NavBar';
 import { useAuth } from '../context/AuthContext';
 import { ChildrenType } from '../models/interface/Children';
+import './AddChild.css';
 
 const AddChild = () => {
   const { currentUser, setCurrentUser } = useAuth();
@@ -57,16 +58,19 @@ const AddChild = () => {
   return (
     <>
       <NavBar />
-      <input
-        type='text'
-        className='modifNameInput'
-        placeholder='Tapez le nom de l enfant'
-        ref={nameChild}
-      />
 
-      <button className='boutonModifierName' onClick={handleClickNameChild}>
-        valider
-      </button>
+      <div className='containairAjout'>
+        <input
+          type='text'
+          className='supNameInput'
+          placeholder='Tapez le nom de la personne a ajouter'
+          ref={nameChild}
+        />
+
+        <button className='boutonSupName' onClick={handleClickNameChild}>
+          valider
+        </button>
+      </div>
     </>
   );
 };

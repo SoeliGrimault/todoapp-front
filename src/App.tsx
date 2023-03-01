@@ -11,6 +11,7 @@ import UserProfile from './Pages/UserProfile';
 import AddDoc from './Pages/AddDoc';
 import CurrentUserProvider from './context/AuthContext';
 import AddChild from './Pages/AddChild';
+import SuppChild from './Pages/SuppChild';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
             <Route path='/user/add/event' element={<AddEvent />} />
             <Route path='/user/add/doc' element={<AddDoc />} />
             <Route path='/user/add/child' element={<AddChild />} />
+            <Route path='/user/supp/child' element={<SuppChild />} />
             <Route path='/user/admin' element={<Admin />} />
 
             {/* </Route> */}

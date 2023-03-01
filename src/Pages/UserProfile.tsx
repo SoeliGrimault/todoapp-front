@@ -3,9 +3,8 @@ import NameInput from '../Components/NameInput';
 import NavBar from '../Components/NavBar';
 import useAxiosPrivate from '../api/useAxiosPrivate';
 import { useAuth } from '../context/AuthContext';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { AxiosResponse } from 'axios';
-import { UserType } from '../models/interface/User';
 import './UserProfile.css';
 import { ChildrenType } from '../models/interface/Children';
 
@@ -81,10 +80,9 @@ import { ChildrenType } from '../models/interface/Children';
 const UserProfile = () => {
   const { currentUser, setCurrentUser } = useAuth();
 
-  console.log('curennt user', currentUser);
+  console.log('User Profile curennt user', currentUser);
 
   const axiosPrivate = useAxiosPrivate();
-  const [userChild, setUserChild] = useState<ChildrenType[] | null>(null);
 
   useEffect(() => {
     if (currentUser) {

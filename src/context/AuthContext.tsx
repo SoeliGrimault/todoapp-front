@@ -11,7 +11,7 @@ import { UserType } from '../models/interface/User';
 
 interface UserContextType {
   currentUser: UserType | null;
-  setCurrentUser: (user: UserType) => void;
+  setCurrentUser: (user: UserType | null) => void;
   checkLogin: () => void;
   authLoading: boolean;
   setAuthLoading: (isLoading: boolean) => void;

@@ -1,0 +1,43 @@
+.containairAjout {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.supNameInput {
+  width: 230px;
+  height: 23px;
+}
+.boutonSupName {
+  width: 81px;
+  height: 23px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e56dd0;
+  color: white;
+}
+
+.boutonSupName:hover,
+.boutonSupName:active,
+.boutonSupName:focus {
+  background-color: #009aa6 !important;
+}
+
+@media (min-width: 768px) {
+  .containairAjout {
+    display: grid;
+    margin-top: 15px;
+  }
+  .supNameInput {
+    width: 433px;
+    height: 30px;
+    font-size: x-large;
+  }
+  .boutonSupName {
+    width: 100px;
+    height: 33px;
+    margin-top: 15px;
+    font-size: x-large;
+  }
+}
