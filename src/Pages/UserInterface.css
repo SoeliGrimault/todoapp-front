@@ -1,21 +1,21 @@
 /* --------------------partie 2 gros logo------------------- */
 .FonctionUI {
   display: flex;
-  justify-content: space-between;
-  padding: 40px;
+  justify-content: center;
+  padding: 23px;
   color: #002060;
 }
 /* ----------------------logo1---------------------------------------- */
-.PrendreUnePhoto {
+/* .PrendreUnePhoto {
   width: 113px;
-}
+} */
 /* ----------------------------logo2--------------------------------- */
-.ajoutevent {
-  width: 113px;
+/* .ajoutevent {
+  width: 70px;
 }
 .textUI {
   display: none;
-}
+} */
 
 /* ------------------------------------version desk---------------------------- */
 @media (min-width: 768px) {
@@ -27,15 +27,15 @@
     color: #002060;
   }
   /* ----------------------logo1---------------------------------------- */
-  .PrendreUnePhoto {
+  /* .PrendreUnePhoto {
     width: 113px;
-  }
+  } */
   /* ----------------------------logo2--------------------------------- */
-  .ajoutevent {
+  /* .ajoutevent {
     width: 113px;
   }
   .textUI {
     display: contents;
     font-size: xx-large;
-  }
+  } */
 }

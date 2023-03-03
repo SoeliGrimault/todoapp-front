@@ -1,3 +1,7 @@
+import { CategoryType } from './Category';
+import { ChildrenType } from './Children';
+import { UserType } from './User';
+
 export interface EventType {
   id: string;
   name: string;
@@ -7,4 +11,6 @@ export interface EventType {
   date: SVGStringList;
   time: string;
   desciption: string;
+  category: CategoryType[];
+  participants: ChildrenType[];
 }

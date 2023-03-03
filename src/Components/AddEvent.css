@@ -1,0 +1,46 @@
+.containairAjoutEvent {
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-top: 23px;
+}
+.lesInputs {
+  border: solid #ff9090;
+  box-shadow: 0px 0px 15px 0px #ff7575;
+  border-radius: 15px;
+  padding: 8px;
+}
+.eventInput {
+  margin: 5px;
+}
+.autreInput {
+  width: 94%;
+  margin: 5px;
+}
+
+.monBouton {
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+}
+.boutonAddEvent {
+  border: none;
+  background-color: #ff7575;
+  width: 73px;
+  height: 28px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
+.boutonAddEvent:hover,
+.boutonAddEvent:active,
+.boutonAddEvent:focus {
+  background-color: white !important;
+  border: solid 0.2em #009aa6;
+  color: #009aa6;
+}
+
+.ajoutevent {
+  width: 80px;
+}

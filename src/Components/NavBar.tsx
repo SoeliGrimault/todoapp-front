@@ -8,21 +8,21 @@ const NavBar = () => {
   return (
     <div className='navbar'>
       <div className='NBContainerLogo'>
-        <Link to={'/user/interface'}>
+        {/* <Link to={'/user/interface'}> */}
+        <img
+          className='logoNB'
+          src='/assets/LogoMobile.png'
+          alt='logo toux doux app'
+        />
+        {/* </Link> */}
+        <div className='logoContainerDesktop'>
+          {/* <Link to={'/user/interface'}> */}
           <img
-            className='logoNB'
-            src='/assets/LogoMobile.png'
+            className='logoDesk'
+            src='/assets/LogoFull.png'
             alt='logo toux doux app'
           />
-        </Link>
-        <div className='logoContainerDesktop'>
-          <Link to={'/user/interface'}>
-            <img
-              className='logoDesk'
-              src='/assets/LogoFull.png'
-              alt='logo toux doux app'
-            />
-          </Link>
+          {/* </Link> */}
         </div>
       </div>
       <div className='iconeNB'>
@@ -33,11 +33,11 @@ const NavBar = () => {
             alt='aller sur mon profil'
           />
         </Link>
-        <Link to={'/user/document'}>
+        <Link to={'/user/interface'}>
           <img
             className='logoDocNB'
-            src='/assets/docbleu.svg'
-            alt='aller sur mes documents'
+            src='/assets/home.svg'
+            alt='aller sur les event'
           />
         </Link>
         <Link to={'/connexion'}>

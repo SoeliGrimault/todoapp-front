@@ -131,7 +131,7 @@ const UserProfile = () => {
         <NameInput />
       </div>
 
-      <div className='Mesenfantsamoi'>
+      <ul className='Mesenfantsamoi'>
         <strong>Mes enfants:</strong>
         {/* si il y a un utilisateur 
        && si currentUser.children
@@ -143,11 +143,11 @@ const UserProfile = () => {
         {currentUser &&
           currentUser.children.length > 0 &&
           currentUser.children.map((child) => (
-            <div className='mesEnfantsaMoi' key={child.id}>
+            <li className='mesEnfantsaMoi' key={child.id}>
               {child.name}
-            </div>
+            </li>
           ))}
-      </div>
+      </ul>
       <div className='PourquoiAjouterEnfant'>
         Ajoutez vos enfants ou personnes à charge vous permettra de filtrer vos
         events et vos documents

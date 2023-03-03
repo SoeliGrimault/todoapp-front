@@ -1,0 +1,97 @@
+.pageSuppChild {
+  color: #002060;
+  font-weight: bold;
+}
+
+.MesEnfantsASup {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+.butonton {
+  width: 83px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e56dd0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.butonton:hover,
+.butonton:active,
+.butonton:focus {
+  background-color: #009aa6 !important;
+}
+
+.divSupCompte {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.supprimerMonCompte {
+  width: 113px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7030a0;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-left: 25px;
+  margin-top: 13px;
+}
+.supprimerMonCompte:hover,
+.supprimerMonCompte:active,
+.supprimerMonCompte:focus {
+  background-color: #d60093 !important;
+}
+
+.retourALaHome {
+  display: grid;
+  justify-content: center;
+  margin-top: 15px;
+}
+.retourHome {
+  width: 75px;
+  margin-left: 55px;
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .butonton {
+    width: 170px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e56dd0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .supprimerMonCompte {
+    width: 160px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7030a0;
+    color: white;
+    font-weight: bold;
+    font-size: 0.5em;
+    margin-left: 85px;
+    margin-top: 13px;
+  }
+  .divSupCompte {
+    font-size: 1.8em;
+  }
+  .retourALaHome {
+    margin-top: 15px;
+    font-size: 1.3em;
+    /* width: 2.3em; */
+  }
+  .retourHome {
+    margin-left: 85px;
+  }
+}

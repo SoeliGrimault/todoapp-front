@@ -84,18 +84,24 @@ const SuppChild = () => {
             </button>
           ))}
       </div>
+      <div className='divSupCompte'>
+        <div className='supprimerCompte'> Supprimer votre compte</div>
 
-      <h2> supprimer mon compte</h2>
+        <button className='supprimerMonCompte' onClick={handleDeleteUser}>
+          supprimer
+        </button>
+      </div>
 
-      <button className='supprimerMonCompte' onClick={handleDeleteUser}>
-        supprimer
-      </button>
-
-      <h2> Retour sur ma HOME Page</h2>
-
-      <Link to={'/user/interface'}>
-        <button className='retourHome'>accueil</button>
-      </Link>
+      <div className='retourALaHome'>
+        <div> Retour sur ma HOME Page</div>
+        <Link to={'/user/interface'}>
+          <img
+            className='retourHome'
+            src='/assets/homeAlone.svg'
+            alt='allez a la page home'
+          />
+        </Link>
+      </div>
     </section>
   );
 };
