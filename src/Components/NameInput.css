@@ -9,12 +9,14 @@
 }
 .boutonModifierName {
   margin-left: 6px;
-  width: 81px;
-  height: 23px;
+  width: 80px;
+  height: 25px;
   border: none;
   border-radius: 5px;
-  background-color: #e56dd0;
+  background-color: #d60093;
   color: white;
+  font-weight: bold;
+  /* font-size: 1.3em; */
 }
 
 .boutonModifierName:hover,

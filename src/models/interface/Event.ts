@@ -10,7 +10,7 @@ export interface EventType {
   city: string;
   date: SVGStringList;
   time: string;
-  desciption: string;
-  category: CategoryType[];
+  description: string;
+  category: CategoryType;
   participants: ChildrenType[];
 }

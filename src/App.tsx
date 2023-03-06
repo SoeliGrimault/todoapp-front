@@ -17,6 +17,7 @@ import { useEffect, useState } from 'react';
 
 import useAxiosPrivate from './api/useAxiosPrivate';
 import axios, { AxiosResponse } from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   // // e
