@@ -1,8 +1,14 @@
 /* --------------------partie 2 gros logo------------------- */
-.FonctionUI {
+/* .FonctionUI {
   display: flex;
   justify-content: center;
   padding: 23px;
+  color: #002060;
+  margin: 5px;
+} */
+
+.contairePageUI {
+  margin: 15px;
   color: #002060;
 }
 /* ----------------------logo1---------------------------------------- */
@@ -16,6 +22,20 @@
 .textUI {
   display: none;
 } */
+
+.filtres {
+  font-size: small;
+  color: #002060;
+}
+.containerFiltres {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  width: 95%;
+}
+.checkboxCategory {
+  font-size: small;
+}
 
 /* ------------------------------------version desk---------------------------- */
 @media (min-width: 768px) {

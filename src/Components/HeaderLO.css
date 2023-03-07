@@ -21,7 +21,7 @@
   max-width: 100%;
 }
 
-.button-Log {
+.button-Connect {
   border: none;
   height: 35px;
   width: 90px;
@@ -32,47 +32,11 @@
   font-weight: bold;
   margin: 5px;
 }
-.button-Log:hover,
-.button-Log:active,
-.button-Log:focus {
+.button-Connect:hover,
+.button-Connect:active,
+.button-Connect:focus {
   background-color: #e56dd0 !important;
 }
-
-/* .button-Log {
-  width: 100px;
-  height: 43px;
-  border: solid 0.1em #002060;
-  border-left: solid 0.2em #002060;
-  border-right: solid 0.2em #002060;
-  border-radius: 5px;
-  background: linear-gradient(
-    180deg,
-    #002060,
-    #818daa,
-    #f1edeb,
-    #f1edeb,
-    #f1edeb,
-    #f1edeb,
-    #f1edeb,
-    #f1edeb,
-    #818daa,
-    #002060
-  );
-
-  color: #002060;
-  font-size: 1em;
-  font-weight: bold;
-  margin: 5px;
-}
-.button-Log:hover,
-.button-Log:active,
-.button-Log:focus {
-  background: linear-gradient(75deg, #ff9900, #f1edeb, #f1edeb, #ff9900);
-  border: solid 0.1em #ff9900;
-  border-left: solid 0.2em #ff9900;
-  border-right: solid 0.2em #ff9900;
-  color: #ff9900;
-} */
 
 @media (min-width: 768px) {
   .headerLP {
@@ -87,7 +51,7 @@
     max-width: 35%;
   }
 
-  .button-Log {
+  .button-Connect {
     height: 53px;
     width: 153px;
     font-size: 1.5em;

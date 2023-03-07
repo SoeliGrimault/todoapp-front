@@ -1,46 +1,70 @@
 .containairAjoutEvent {
   padding-left: 18px;
   padding-right: 18px;
-  margin-top: 23px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 .lesInputs {
   border: solid #ff9090;
   box-shadow: 0px 0px 15px 0px #ff7575;
   border-radius: 15px;
   padding: 8px;
+  font-size: small;
 }
-.eventInput {
+.nameInput {
   margin: 5px;
+  width: 70%;
 }
 .autreInput {
-  width: 94%;
+  width: 92%;
+  margin: 5px;
+}
+.adressInput {
+  width: 45%;
+  margin: 4px;
+}
+.dateInput {
   margin: 5px;
 }
 
-.monBouton {
+.checkboxSelect {
+  display: flex;
+  justify-content: space-around;
+}
+
+.monBoutonAddEvent {
   display: flex;
   justify-content: center;
-  margin: 3px;
+  margin: 4px;
 }
 .boutonAddEvent {
   border: none;
-  background-color: #ff7575;
-  width: 73px;
-  height: 28px;
+  background-color: #da1460;
+  width: 80px;
+  height: 33px;
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  font-size: large;
+  font-size: 1.3em;
+  text-align: center;
 }
 
 .boutonAddEvent:hover,
 .boutonAddEvent:active,
 .boutonAddEvent:focus {
   background-color: white !important;
-  border: solid 0.2em #009aa6;
+  border: solid 0.1em #009aa6;
   color: #009aa6;
 }
 
 .ajoutevent {
-  width: 80px;
+  width: 70px;
+}
+
+@media (min-width: 768px) {
+  .containairAjoutEvent {
+    width: 30%;
+    margin-left: 600px;
+  }
 }

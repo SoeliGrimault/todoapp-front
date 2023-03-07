@@ -14,9 +14,9 @@ const HeaderLO = () => {
       </div>
       <div className='buttonContainer'>
         <Link to={'/connexion'}>
-          <Button className='button-Log' type='submit'>
+          <button className='button-Connect' type='submit'>
             Connexion
-          </Button>
+          </button>
         </Link>
       </div>
     </div>

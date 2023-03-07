@@ -24,9 +24,9 @@ const LandingPage = () => {
       </div>
       <div className='buttonLPsign'>
         <Link to={'/inscription'}>
-          <Button className='button-Sign' type='submit'>
+          <button className='button-Sign' type='submit'>
             Inscrivez-vous gratuitement
-          </Button>
+          </button>
         </Link>
       </div>
     </div>

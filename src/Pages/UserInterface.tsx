@@ -9,6 +9,7 @@ import { AxiosResponse } from 'axios';
 import './UserInterface.css';
 import Card from 'react-bootstrap/Card';
 import { CategoryType } from '../models/interface/Category';
+import { Link } from 'react-router-dom';
 
 // interface EventFormProps {
 //   maListDeventDuParentApp: EventType[];
@@ -100,20 +101,20 @@ const UserInterface = () => {
     <div className='UIpage'>
       <NavBar />
 
-      {/* <div className='FonctionUI'> */}
-      {/* <p className='textUI'> Ajouter un document :</p>
+      {/* <div className='FonctionUI'>
+        <p className='textUI'> Ajouter un document :</p>
         <Link to={'/user/add/doc'}>
           <img
             className='PrendreUnePhoto'
             src='/assets/appphoto1.svg'
             alt='allez sur ajout doc, prrendre une pictur'
           />
-        </Link> */}
-      {/* <div className='textUI'>Créer un event :</div>
+        </Link>
+        <div className='textUI'>Créer un event :</div>
 
         <img
-          className='ajoutevent'
-          src='/assets/addevent.svg'
+          className='ajoutevent1'
+          src='/assets/addevent1.svg'
           alt='allez sur ajout event'
         />
       </div> */}
@@ -121,61 +122,75 @@ const UserInterface = () => {
         setMalisteDeventblabla={setEventsList}
         recevoirMaListdEvent={eventsList}
       />
-      <p>choisissez une categorie</p>
-      <select className='checkboxCategory' onChange={handleSelectCateg}>
-        <option value={''}>Aucune</option>
-        {listCateg.map((category) => (
-          <option
-            value={category.name}
-            className='lesFiltres'
-            key={category.id}
-          >
-            {category.name}
-          </option>
-        ))}
-      </select>
-      <p> choisissez un enfant</p>
-      <select className='checkboxCategory' onChange={handleSelectChild}>
-        <option value={''}>Aucun</option>
-        {currentUser?.children.map((child) => (
-          <option value={child.name} className='lesFiltres' key={child.id}>
-            {child.name}
-          </option>
-        ))}
-      </select>
+      <div className='contairePageUI'>
+        <strong>Choisissez vos filtres :</strong>
+        <div className='containerFiltres'>
+          <div className='filtres'>categorie</div>
+          <select className='checkboxCategory' onChange={handleSelectCateg}>
+            <option value={''}>Aucune</option>
+            {listCateg.map((category) => (
+              <option
+                value={category.name}
+                className='filtres'
+                key={category.id}
+              >
+                {category.name}
+              </option>
+            ))}
+          </select>
+          <div className='filtres'>personne</div>
+          <select className='checkboxCategory' onChange={handleSelectChild}>
+            <option value={''}>Aucun</option>
+            {currentUser?.children.map((child) => (
+              <option value={child.name} className='filtres' key={child.id}>
+                {child.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      {eventsList.length > 0 ? (
-        eventsList.map((event) => (
-          <Card style={{ width: '18rem' }} key={event.id}>
-            <Card.Body className='mesvents'>
-              <Card.Text>
-                <strong>{event.name}</strong>{' '}
-              </Card.Text>
-              <Card.Text>
-                Date: {event.date} Heure:{event.time}{' '}
-              </Card.Text>
-              <Card.Text>
-                Adresse : {event.address} Ville: {event.city}{' '}
-              </Card.Text>
-              <Card.Text> Categ : {event.category.name} </Card.Text>
+        {eventsList.length > 0 ? (
+          eventsList.map((event) => (
+            <Card className='m-3' style={{ width: '18rem' }} key={event.id}>
+              <Card.Body>
+                <Card.Title>
+                  <strong>{event.name}</strong>{' '}
+                </Card.Title>
 
-              <Card.Text>Description : {event.description} </Card.Text>
-              {event.participants &&
-                (event.participants.length > 0 ? (
-                  <Card.Text>
-                    <strong>{event.participants[0].name}</strong>
-                  </Card.Text>
-                ) : (
-                  <Card.Text>
-                    <strong>{currentUser?.name}</strong>
-                  </Card.Text>
-                ))}
-            </Card.Body>
-          </Card>
-        ))
-      ) : (
-        <p> pas d'event avec ces filtres</p>
-      )}
+                <Card.Text>
+                  <strong> Date :</strong> {event.date} <strong>Heure :</strong>{' '}
+                  {event.time}{' '}
+                </Card.Text>
+                <Card.Text>
+                  <strong>Adresse :</strong> {event.address}
+                </Card.Text>
+                <Card.Text>
+                  <strong>Ville :</strong> {event.city}
+                </Card.Text>
+                <Card.Text>
+                  <strong> Description : </strong> {event.description}{' '}
+                </Card.Text>
+                <Card.Text>
+                  {' '}
+                  <strong> Categorie :</strong> {event.category.name}{' '}
+                  {event.participants &&
+                    (event.participants.length > 0 ? (
+                      <Card.Text>
+                        <strong>{event.participants[0].name}</strong>
+                      </Card.Text>
+                    ) : (
+                      <Card.Text>
+                        <strong>Pour : {currentUser?.name}</strong>
+                      </Card.Text>
+                    ))}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          ))
+        ) : (
+          <p> pas d'event avec ces filtres</p>
+        )}
+      </div>
 
       {/* <ul className='MesEventsNonPast'>
         <strong>Mes Events:</strong>

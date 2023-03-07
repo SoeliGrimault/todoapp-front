@@ -3,6 +3,7 @@
   justify-content: center;
   color: #002060;
   font-size: 2em;
+  margin-top: 15px;
 }
 .containerConnexion {
   margin: 20px;
@@ -10,15 +11,6 @@
   justify-content: center;
   color: #002060;
   font-weight: bold;
-  /* background: linear-gradient(
-    85deg,
-    #f8c275 2%,
-    #f3dfc3 10%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #f3dfc3 90%,
-    #f8c275 98%
-  ); */
 }
 
 .form-control {

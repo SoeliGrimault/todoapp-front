@@ -192,7 +192,7 @@ const AddEvent = ({
 
   return (
     <div className='containairAjoutEvent'>
-      <form className='MesInputs' onSubmit={handleSubmitForm}>
+      <form onSubmit={handleSubmitForm}>
         <div className='lesInputs'>
           <img
             className='ajoutevent'
@@ -201,7 +201,7 @@ const AddEvent = ({
           />
           <input
             type='text'
-            className='eventInput'
+            className='nameInput'
             placeholder='Nom Event'
             ref={nameElement}
           />
@@ -214,25 +214,25 @@ const AddEvent = ({
           />
           <input
             type='text'
-            className='eventInput'
+            className='adressInput'
             placeholder='Code Postale'
             ref={postalCodeElement}
           />
           <input
             type='text'
-            className='eventInput'
+            className='adressInput'
             placeholder='Ville'
             ref={cityElement}
           />
           <input
             type='date'
-            className='eventInput'
+            className='dateInput'
             placeholder='date'
             ref={dateElement}
           />
           <input
             type='time'
-            className='eventInput'
+            className='dateInput'
             placeholder='la l heure'
             ref={timeElement}
           />
@@ -242,40 +242,37 @@ const AddEvent = ({
             placeholder='une description?'
             ref={descriptionElement}
           />
+          <div className='checkboxSelect'>
+            <select ref={categoryRef}>
+              {listCategoryDisplay.map((category) => (
+                <option
+                  value={category.id}
+                  className='checkboxCategChild'
+                  key={category.id}
+                >
+                  {category.name}
+                </option>
+              ))}
+            </select>
 
-          <select
-            // type=''
-            className='checkboxCategory'
-            ref={categoryRef}
-          >
-            {listCategoryDisplay.map((category) => (
-              <option
-                value={category.id}
-                className='checkboxCategory'
-                key={category.id}
-              >
-                {category.name}
-              </option>
-            ))}
-          </select>
+            <select ref={childRef}>
+              {currentUser?.children.map((child) => (
+                <option
+                  value={child.id}
+                  className='les categggg'
+                  key={child.id}
+                >
+                  {child.name}
+                </option>
+              ))}
+            </select>
 
-          <select
-            // type=''
-            className='checkboxCategory'
-            ref={childRef}
-          >
-            {currentUser?.children.map((child) => (
-              <option value={child.id} className='les categggg' key={child.id}>
-                {child.name}
-              </option>
-            ))}
-          </select>
+            <button type='submit' className='boutonAddEvent'>
+              créer
+            </button>
+          </div>
         </div>
-        <div className='monBouton'>
-          <button type='submit' className='boutonAddEvent'>
-            créer
-          </button>
-        </div>
+
         {errorMsg && <Alert variant='danger'>{errorMsg}</Alert>}
         {errorApiMessage &&
           errorApiMessage.map((error, i) => (
