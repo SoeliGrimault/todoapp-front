@@ -9,15 +9,7 @@ import { AxiosResponse } from 'axios';
 import './UserInterface.css';
 import Card from 'react-bootstrap/Card';
 import { CategoryType } from '../models/interface/Category';
-import { Link } from 'react-router-dom';
 
-// interface EventFormProps {
-//   maListDeventDuParentApp: EventType[];
-// setMalisteDeventblabla: (listEvent: EventType[]) => void;
-//   //tout ce que j'ai besoin de lui passer c'est ma list d'event
-// }
-
-// const UserInterface = ({ maListDeventDuParentApp }: EventFormProps) =>
 let listEventPure: EventType[] = [];
 let valCategSelect = '';
 let valChildSelect = '';
@@ -30,13 +22,9 @@ const UserInterface = () => {
 
   useEffect(() => {
     axiosPrivate
-      // axios.get event
       .get('/event')
       .then((response: AxiosResponse<EventType[]>) => {
-        // .then : Response :
-
         console.log('-----------app . tsx eseeffectlistevent', response.data);
-        // set dans mon state response.data
         setEventsList(response.data);
         listEventPure = response.data;
       })
@@ -52,15 +40,11 @@ const UserInterface = () => {
       .catch((error) => console.log('add evenh erreur fetch category', error));
   }, []);
 
-  // useEffect(() => {
-  //   console.log('----dans UseEffect---: ', valeurChildSelect);
-  // }, [valeurChildSelect]);
-
   const handleSelectCateg = (e: React.ChangeEvent<HTMLSelectElement>) => {
     console.log('------------UI event e', e.target.value);
     // je souhaite recuperer la valeur selectionnéé
     // je la stock dans le set
-    // setValeurCategSelect(e.target.value);
+
     valCategSelect = e.target.value;
     // je souhaite filtrer les events
     filterEvent();
@@ -68,8 +52,7 @@ const UserInterface = () => {
 
   const handleSelectChild = (e: React.ChangeEvent<HTMLSelectElement>) => {
     console.log('------------UI child e', e.target.value);
-    // setValeurChildSelect(e.target.value);
-    // console.log('-----VCS', valeurChildSelect);
+
     valChildSelect = e.target.value;
     filterEvent();
   };
@@ -78,7 +61,7 @@ const UserInterface = () => {
     let listEventPasPure: EventType[] = [...listEventPure];
     //spread op list event pure
     // si une categ est selectionnee filtrer les event en fonction de la categ
-    //chqaque fois que if variable tampon egale au resultat de notre filter
+    //chaque fois que if variable tampon egale au resultat de notre filter
     // idem pour les child
 
     //retourner le tableau avec le setEvL
@@ -148,48 +131,53 @@ const UserInterface = () => {
             ))}
           </select>
         </div>
+        <div className='displayCards'>
+          {eventsList.length > 0 ? (
+            eventsList.map((event) => (
+              <Card
+                className='uneCard'
+                style={{ width: '18rem' }}
+                key={event.id}
+              >
+                <Card.Body>
+                  <Card.Title>
+                    <strong>{event.name}</strong>
+                  </Card.Title>
 
-        {eventsList.length > 0 ? (
-          eventsList.map((event) => (
-            <Card className='m-3' style={{ width: '18rem' }} key={event.id}>
-              <Card.Body>
-                <Card.Title>
-                  <strong>{event.name}</strong>{' '}
-                </Card.Title>
-
-                <Card.Text>
-                  <strong> Date :</strong> {event.date} <strong>Heure :</strong>{' '}
-                  {event.time}{' '}
-                </Card.Text>
-                <Card.Text>
-                  <strong>Adresse :</strong> {event.address}
-                </Card.Text>
-                <Card.Text>
-                  <strong>Ville :</strong> {event.city}
-                </Card.Text>
-                <Card.Text>
-                  <strong> Description : </strong> {event.description}{' '}
-                </Card.Text>
-                <Card.Text>
-                  {' '}
-                  <strong> Categorie :</strong> {event.category.name}{' '}
-                  {event.participants &&
-                    (event.participants.length > 0 ? (
-                      <Card.Text>
-                        <strong>{event.participants[0].name}</strong>
-                      </Card.Text>
-                    ) : (
-                      <Card.Text>
-                        <strong>Pour : {currentUser?.name}</strong>
-                      </Card.Text>
-                    ))}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          ))
-        ) : (
-          <p> pas d'event avec ces filtres</p>
-        )}
+                  <Card.Text>
+                    <strong> Date :</strong> {event.date}
+                    <strong> Heure :</strong> {event.time}
+                  </Card.Text>
+                  <Card.Text>
+                    <strong>Adresse :</strong> {event.address}
+                  </Card.Text>
+                  <Card.Text>
+                    <strong>Ville :</strong> {event.city}
+                  </Card.Text>
+                  <Card.Text>
+                    <strong> Description : </strong> {event.description}
+                  </Card.Text>
+                  <Card.Text>
+                    {' '}
+                    <strong> Categorie :</strong> {event.category.name}
+                    {event.participants &&
+                      (event.participants.length > 0 ? (
+                        <Card.Text>
+                          <strong>{event.participants[0].name}</strong>
+                        </Card.Text>
+                      ) : (
+                        <Card.Text>
+                          <strong>Pour : {currentUser?.name}</strong>
+                        </Card.Text>
+                      ))}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            ))
+          ) : (
+            <p> pas d'event avec ces filtres</p>
+          )}
+        </div>
       </div>
 
       {/* <ul className='MesEventsNonPast'>

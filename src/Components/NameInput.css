@@ -4,8 +4,9 @@
 }
 
 .modifNameInput {
-  width: 173px;
+  width: 183px;
   height: 23px;
+  font-size: smaller;
 }
 .boutonModifierName {
   margin-left: 6px;
@@ -30,12 +31,16 @@
     font-size: 1em;
   }
   .modifNameInput {
-    width: 200px;
-    height: 23px;
+    width: 280px;
+    height: 28px;
+    font-size: 1.3em;
   }
 
   .boutonModifierName {
-    height: 23px;
+    height: 33px;
+    width: 100px;
     font-weight: bold;
+    text-align: center;
+    font-size: large;
   }
 }

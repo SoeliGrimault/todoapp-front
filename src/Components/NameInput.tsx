@@ -24,10 +24,6 @@ export const NameInput = () => {
   ) => {
     e.preventDefault();
 
-    // let testing = [...document.getElementsByClassName('.modifNameInput')];
-    // testing.map((testAgain) => testAgain.in
-    // input.placeholder = "");
-
     const newName = nameElement.current?.value;
 
     if (newName) {
@@ -36,17 +32,20 @@ export const NameInput = () => {
           name: newName,
         })
         .then((response: AxiosResponse) => {
-          console.log("Réponse de la récupération valeur d'un user", response);
+          console.log(
+            "Name Input Réponse de la récupération valeur d'un user",
+            response
+          );
           currentUser &&
             setCurrentUser({
               ...currentUser,
               name: newName,
             });
-          setUserUpdate(`Mise à jour réussi `);
+          setUserUpdate(`Mise à jour réussi`);
           setTimeout(() => {
             setUserUpdate('');
           }, 5000);
-          // window.location.reload();
+
           if (nameElement.current) {
             console.log('est ce que je rentre dedans');
             nameElement.current.value = '';

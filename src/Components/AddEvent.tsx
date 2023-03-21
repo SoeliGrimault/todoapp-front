@@ -25,7 +25,7 @@ const AddEvent = ({
   setMalisteDeventblabla,
   recevoirMaListdEvent,
 }: EventFormProps) => {
-  // Je fais met constante de bases
+  // Je fais mes constantes de bases
   const { currentUser, setCurrentUser } = useAuth();
   const navigate = useNavigate();
   const axiosPrivate = useAxiosPrivate();
@@ -44,7 +44,7 @@ const AddEvent = ({
         console.log('-----------add event - fetcch category', listCategory);
         setListCategoryDisplay(listCategory);
       })
-      .catch((error) => console.log('add evenh erreur fetch category', error));
+      .catch((error) => console.log('add event erreur fetch category', error));
 
     if (currentUser) {
       axiosPrivate
@@ -57,7 +57,7 @@ const AddEvent = ({
             });
         })
         .catch((error) =>
-          console.log('addd event list efant-------------error ', error)
+          console.log('add event list enfant-------------error ', error)
         );
     }
   }, []);
@@ -109,9 +109,7 @@ const AddEvent = ({
       let dateDuJour = Date.now();
 
       if (dateHourInput < dateDuJour) {
-        setErrorMsg(
-          'Cette date est déjà passée. Nous vous conseillons de prévoir votre évènement au moins 24h en avance.'
-        );
+        setErrorMsg('Cette date est déjà passée.');
         setTimeout(() => {
           setErrorMsg('');
         }, 5000);
@@ -153,14 +151,14 @@ const AddEvent = ({
             ]
           : [],
       };
-      console.log('---------ADD EVENT  userInsert', eventInsert);
+      console.log('---------ADD EVENT  eventInsert', eventInsert);
 
       axiosPrivate
         .post('/event', eventInsert)
         .then((response: AxiosResponse<EventType>) => {
           let eventData = response.data;
-          console.log('organiser, eventdata evenement crée : ', eventData);
-          // let eventList = [...event];
+          console.log('add event, eventdata evenement crée : ', eventData);
+
           console.log(
             'addEvent, recevoir ma list devent : ',
             recevoirMaListdEvent

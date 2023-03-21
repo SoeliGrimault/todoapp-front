@@ -63,7 +63,7 @@ const AddChild = () => {
         <input
           type='text'
           className='supNameInput'
-          placeholder='Tapez le nom de la personne a ajouter'
+          placeholder='Tapez le nom de la personne'
           ref={nameChild}
         />
 

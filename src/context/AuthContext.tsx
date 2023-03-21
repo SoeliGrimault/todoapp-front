@@ -68,7 +68,7 @@ const CurrentUserProvider = ({ children }: ProviderProps) => {
         localStorage.removeItem('accessToken');
         navigate('/connexion');
       } else {
-        console.log('zutttttttttttttttttttt à jour : ', user);
+        console.log('Auth user à jour : ', user);
         const userWithChildren = { ...user, children: [] };
         setCurrentUser(userWithChildren);
       }

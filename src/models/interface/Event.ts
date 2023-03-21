@@ -8,7 +8,8 @@ export interface EventType {
   address: string;
   postalCode: string;
   city: string;
-  date: SVGStringList;
+  // date: SVGStringList;
+  date: string;
   time: string;
   description: string;
   category: CategoryType;

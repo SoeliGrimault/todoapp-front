@@ -60,11 +60,6 @@ const Connexion = () => {
       <HeaderLO />
       <h1 className='titleConnexion'> Connexion</h1>
       <Container className='containerConnexion'>
-        {/* {redirectMessage && (
-          <Alert variant='warning' className='my-3'>
-            {redirectMessage}
-          </Alert>
-        )} */}
         <form>
           <div className='form-group'>
             <label htmlFor='emailConnexion'>Email :</label>
